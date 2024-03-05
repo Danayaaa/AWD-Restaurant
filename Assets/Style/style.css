@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Shrikhand", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    display:flex;
+    height: 88%;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 20px;
+    color: #2F1D1A;
+}
+
+p {
+    color: #2F1D1A;
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: 20px;
+    font-family: "Chivo", sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+.food-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.food-container .foods {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out;
+}
+
+.food-container .foods:hover {
+    height: 390px;
+}
+
+.food-container .foods .img {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.food-container .foods:hover .img {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.food-container .foods .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-container .foods .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.food-container .foods:hover .content{
+   top: 130px;
+   height: 250px;
+
+}
+
+.food-container .foods .content h2 {
+    font-size: 1.5 em;
+    font-weight: 700;
+    color: #2F1D1A;
+    letter-spacing: 1px;
+}
+
+.food-container .foods .content p {
+    color: #2F1D1A;
+}
+
+.food-container .foods .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2F1D1A;
+    color: fff;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: all 0.3s ease; 
+}
+
+.food-container .foods .content a:hover {
+    background-color: antiquewhite;
+    color: #2F1D1A;
+    border: 2px solid #2F1D1A;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    display: flex;
+    background-color: antiquewhite; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+    border-radius: 20px;
+}
+
+.modal-content p {
+    font-size: 1.2em; 
+    line-height: 30px;
+}
+
+.modal-left {
+    flex: 1;
+}
+
+.modal .modal-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.modal-right {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+
+ 
